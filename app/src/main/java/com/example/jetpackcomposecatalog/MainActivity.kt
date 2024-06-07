@@ -1,26 +1,19 @@
 package com.example.jetpackcomposecatalog
 
 import android.os.Bundle
-import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import com.example.jetpackcomposecatalog.ui.components.MyAlertDialog
+import com.example.jetpackcomposecatalog.ui.components.SuperHeroStickyView
 import com.example.jetpackcomposecatalog.ui.theme.JetpackComposeCatalogTheme
 
 class MainActivity : ComponentActivity() {
+    @ExperimentalFoundationApi
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -31,6 +24,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    SuperHeroStickyView()
+                    //SuperHeroWithSpecialControlView()
                     /*val myOptions = getOptions(titles = listOf("Heri", "Ejemplo", "Otra opcion"))
                     var selected by remember {
                         mutableStateOf("Opción 1")
@@ -50,7 +45,7 @@ class MainActivity : ComponentActivity() {
                         //BasicSlider()
                     }*/
                     // Dialogs
-                    var show by remember {
+                    /*var show by remember {
                         mutableStateOf(false)
                     }
                     Box (
@@ -66,7 +61,7 @@ class MainActivity : ComponentActivity() {
                             onDismiss = { show = false },
                             onConfirm = { Log.d("DIALOG", "Hello onConfirm") }
                         )
-                    }
+                    }*/
                 }
             }
         }
