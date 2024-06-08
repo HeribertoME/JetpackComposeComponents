@@ -9,7 +9,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
-import com.example.jetpackcomposecatalog.ui.components.SuperHeroStickyView
+import com.example.jetpackcomposecatalog.ui.components.MyTopBarWithDrawable
 import com.example.jetpackcomposecatalog.ui.theme.JetpackComposeCatalogTheme
 
 class MainActivity : ComponentActivity() {
@@ -24,7 +24,9 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    SuperHeroStickyView()
+                    MyTopBarWithDrawable()
+                    //ScaffoldExample()
+                    //SuperHeroStickyView()
                     //SuperHeroWithSpecialControlView()
                     /*val myOptions = getOptions(titles = listOf("Heri", "Ejemplo", "Otra opcion"))
                     var selected by remember {
