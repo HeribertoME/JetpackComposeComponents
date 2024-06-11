@@ -2,12 +2,23 @@ package com.example.jetpackcomposecatalog.ui.components
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.ElevatedButton
+import androidx.compose.material3.ExtendedFloatingActionButton
+import androidx.compose.material3.FilledTonalButton
+import androidx.compose.material3.FloatingActionButton
+import androidx.compose.material3.Icon
+import androidx.compose.material3.LargeFloatingActionButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
+import androidx.compose.material3.SmallFloatingActionButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -74,5 +85,53 @@ fun MyButtonExample() {
         TextButton(onClick = { }) {
             Text(text = "TextButton")
         }
+
+        CreateSpace()
+
+        FilledTonalButton(onClick = {  }) {
+            Text(text = "FilledTonalButton")
+        }
+
+        CreateSpace()
+
+        ElevatedButton(onClick = { }) {
+            Text(text = "ElevatedButton")
+        }
+
+        CreateSpace()
+
+        FloatingActionButton(onClick = { }) {
+            Icon(imageVector = Icons.Filled.Favorite, contentDescription = "fav")
+        }
+        
+        CreateSpace()
+
+        FloatingActionButton(onClick = { }) {
+            Icon(imageVector = Icons.Filled.Favorite, contentDescription = "fav")
+        }
+
+        CreateSpace()
+
+        SmallFloatingActionButton(onClick = { }) {
+            Icon(imageVector = Icons.Filled.Favorite, contentDescription = "fav")
+        }
+
+        CreateSpace()
+
+        LargeFloatingActionButton(onClick = { }) {
+            Icon(imageVector = Icons.Filled.Favorite, contentDescription = "fav")
+        }
+
+        CreateSpace()
+
+        ExtendedFloatingActionButton(onClick = { }) {
+            Text(text = "ExtendedFloatingActionButton")
+            Icon(imageVector = Icons.Filled.Favorite, contentDescription = "fav")
+        }
     }
+}
+
+@Composable
+fun CreateSpace() {
+    Spacer(modifier = Modifier.height(8.dp))
 }
